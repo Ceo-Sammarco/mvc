@@ -1,0 +1,154 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+header {
+    height: 10vw;
+    max-height: 170px;
+    display: flex;
+    width: 100%;
+}
+
+.topo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-shadow: 0rem 0.125rem 0.625rem rgb(0, 0, 0, 0.25);
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logoComisBebisHeader {
+    display: flex;
+    max-width: 156px;
+    height: 100%;
+    padding-top: 3px;
+    padding-left: 3vw;
+    align-items: center;
+}
+
+.logoComisBebisHeader img {
+    max-width: 8.2vw;
+}
+
+.menu {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.botaoMonteDoSeuJeito {
+    display: flex;
+    color: white;
+    align-items: center;
+    background-color: #ffa500;
+    border-radius: 50px;
+    line-height: 5vw;
+    font-weight: bold;
+    font-size: min(max(8px, 1.1vw), 18px);
+    width: 30%;
+    justify-content: center;    
+ }
+
+ .botaoMonteDoSeuJeito a {
+    color: white;    
+    text-decoration: none;
+ }
+
+.botaoCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgBotaoCarrinho {
+    display: flex;   
+    width: 6.2vw;
+}
+
+#textoBotaoCarrinho {
+    text-align: center;
+    color: white;
+    margin-top: 0rem;
+    font-weight: bold;
+    font-size: min(max(4px, 1vw), 13.5px);
+}
+
+#loginRegistro {
+    display: flex;
+    padding-left: 5%;
+    color: black;
+    background-color: #ffa500;
+    width: 35%;
+    font-weight: bold;
+    font-size: min(max(8px, 1.5vw), 18px);
+    height: 100%;
+    align-items: center;    
+}
+
+#btn_navMenuHamburguer {
+    display: none;
+}
+.navMenuMobile {
+    display: none;
+}
+
+/* INICIO FORMATOS RESPONSIVOS */
+
+@media screen and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+    
+    #btn_navMenuHamburguer {
+        display: block;
+        width: 30px;
+        background-color: #ffa500;
+        border-style: none;
+        margin-right: 5vw;
+    }    
+    
+    .navMenuMobile {
+        list-style: none;
+        background-color: #ffa500;
+        width: 100vw;
+        z-index: 3;
+        position: absolute;
+        top: 10vw;
+        left: 0%;
+        height: 30vw;        
+        flex-direction: column;
+        text-align: center;  
+        cursor: pointer;      
+    }
+
+    #ulMenuMobile {
+        display: flex;
+        flex-direction: column;
+        padding: 4vw;  
+    }
+
+    #ulMenuMobile li {
+        display: flex;
+        flex-direction: column;
+        padding: 3vw;        
+    }
+     
+    .navMenuMobile a {
+        text-decoration: none;
+        color: black;
+    }
+    .navMenuMobile a:hover {
+        background-color: #00000080 ;
+    }
+    
+}    

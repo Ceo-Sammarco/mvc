@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comis & Bebis</title>
+    <link rel="stylesheet" href="stylesheets/css-pg-produtos.css">
+    <link rel="stylesheet" href="stylesheets/css-header.css">
+    <link rel="stylesheet" href="stylesheets/css-footer.css">
+   
+
+</head>
+<%- include("card-login-e-registro"); %>
+
+    <body >
+        <%- include('./partials/header') %>
+
+            <main>
+                <!-- COMEÇO DOS INGREDIENTES -->
+                <form action="/carrinho" method="POST">
+                    <section id="container-ingredientes">
+                        <div class="boxItens" id="pao">
+                            <div class="pao-titulo"> <strong>LANCHES</strong> </div>
+                            <div class="pao-box">
+                                <input type="radio" id="PÃO TRADICIONAL" class="lanche" name="pao" value="BIG HEAT - R$ 22,00" checked>
+                                <label for="pao"> BIG HEAT - R$ 22,00</label>
+                            </div>
+                            <div class="pao-box">
+                                <input type="radio" id="PÃO AMERICANO" class="lanche" name="pao" value="HEAT BURGUER SIMPLES - R$ 24,00">
+                                <label for="pao">HEAT BURGUER SIMPLES - R$ 24,00</label>
+                            </div>
+                            <div class="pao-box">
+                                <input type="radio" id="PÃO ITALIANO" class="lanche" name="pao" value="HEAT BURGUER DUPLO - R$ 27,00">
+                                <label for="pao">HEAT BURGUER DUPLO - R$ 27,00</label>
+                            </div>
+                            <div class="pao-box">
+                                <input type="radio" id="PÃO BRIOCHE" class="lanche" name="pao" value="HEAT BURGUER TRIPLO - R$ 31,00">
+                                <label for="pao">HEAT BURGUER TRIPLO - R$ 31,00</label>
+                            </div>
+                        </div>
+
+                        <div class="boxItens" id="acompanhamento">
+                            <div class="acompanhamento-titulo">
+                                <strong>ACOMPANHAMENTO</strong>
+                            </div>
+                            <div class="acompanhamento-box">
+                                <input type="radio" id="BATATA RUSTICA SIMPLES" name="acompanhamento" value="BATATA RUSTICA SIMPLES - R$ 21,00"
+                                    checked>
+                                <label for="acompanhamento">BATATA RUSTICA SIMPLES - R$ 21,00</label>
+                            </div>
+                            <div class="acompanhamento-box">
+                                <input type="radio" id="FRITAS PALITO SIMPLES" name="acompanhamento" value="FRITAS PALITO SIMPLES - R$ 18,00">
+                                <label for="acompanhamento">FRITAS PALITO SIMPLES - R$ 18,00</label>
+                            </div>
+                            <div class="acompanhamento-box">
+                                <input type="radio" id="FRITAS PALITO CHEDDAR E BACON" name="acompanhamento" value="FRITAS PALITO CHEDDAR E BACON - R$ 22,00">
+                                <label for="acompanhamento">FRITAS PALITO CHEDDAR - R$ 22,00</label>
+                            </div>
+                        </div>
+
+                        <div class="boxItens" id="bebidas">
+                            <div class="bebidas-titulo">
+                                <strong>BEBIDAS</strong>
+                            </div>
+                            <div class="bebidas-box">
+                                <input type="radio" id="COCA COLA" name="bebidas" value="COCA COLA - R$ 5,00" checked>
+                                <label for="bebidas">COCA COLA - R$ 5,00</label>
+                                
+                            </div>
+                            <div class="bebidas-box">
+                                <input type="radio" id="GUARANA" name="bebidas" value="GUARANA - R$ 5,00">
+                                <label for="bebidas">GUARANA - R$ 5,00</label>
+                            </div>
+                            <div class="bebidas-box">
+                                <input type="radio" id="SUCO DE LARANJA" name="bebidas" value="SUCO DE LARANJA - R$ 8,00">
+                                <label for="bebidas">SUCO DE LARANJA - R$ 8,00</label>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="botaoPagamento">
+                        <button id="irparapagamento">
+                            <div class="pagamento-titulo">
+                                IR PARA CARRINHO
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </main>
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

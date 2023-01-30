@@ -1,0 +1,198 @@
+/* CORPO DO SITE  */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60%;
+    width: 100%;
+    align-items: baseline;
+    background-image: url("../images/FundoDesktop.png");
+    background-size: cover;
+}
+
+strong {
+    align-items: center;
+}
+
+main {
+    /* display: flex;
+    justify-content: center; */
+    flex-direction: column;
+    margin-bottom: 150px;
+    margin-top: 150px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container-ingredientes {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#pao {
+    margin: 30px;
+    width: 400px;
+    height: 200px;
+    left: 17px;
+    top: 210px;
+    background: #C4C4C4;
+    text-align: start;
+    border-radius: 15px;
+}
+
+.pao-titulo {
+    position: center;
+    width: 400px;
+    height: 43px;
+    left: 0px;
+    top: 0px;
+    background: #FFA500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5;
+    font-size: larger;
+    border-radius: 15px;
+}
+
+.pao-box {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    text-align: left;
+    margin: 18px;
+}
+
+.preco {
+    margin-left: 20px;
+}
+
+.lanche {
+    margin-right: 5px;
+}
+
+#acompanhamento {
+    margin: 30px;
+    width: 400px;
+    height: 200px;
+    left: 17px;
+    top: 210px;
+    background: #C4C4C4;
+    text-align: start;
+    border-radius: 15px;
+}
+
+.acompanhamento-titulo {
+    position: center;
+    width: 400px;
+    height: 43px;
+    left: 0px;
+    top: 0px;
+    background: #FFA500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5;
+    font-size: larger;
+    border-radius: 15px;
+}
+
+.acompanhamento-box {
+    width: 100%;
+    text-align: left;
+    margin: 25px;
+}
+
+#bebidas {
+    margin: 30px;
+    width: 400px;
+    height: 200px;
+    left: 17px;
+    top: 210px;
+    background: #C4C4C4;
+    text-align: start;
+    border-radius: 15px;
+}
+
+.bebidas-titulo {
+    position: center;
+    width: 300x;
+    height: 43px;
+    left: 0px;
+    top: 0px;
+    background: #FFA500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5;
+    font-size: larger;
+    border-radius: 15px;
+}
+
+.bebidas-box {
+    width: 100%;
+    text-align: left;
+    margin: 25px;
+}
+
+#botaoPagamento {
+    display: flex;
+    justify-content: space-around;
+}
+
+#irparapagamento {
+    display: flex;
+    width: 13.75rem;
+    height: 5rem;
+    background: #FFA500;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.pagamento-titulo {
+    position: center;
+    width: 218px;
+    height: 43px;
+    left: 0px;
+    top: 0px;
+    background: #FFA500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5;
+    font-size: larger;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin-block: 10px;
+    }
+
+    #container-ingredientes {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.teste{
+    background-color: #C4C4C4;
+    border-color: #C4C4C4;
+    outline: 0;
+    width: 50px;
+    margin-left: 50px;
+}
+
+.teste::placeholder{
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+}

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lista{
+    display:flex;
+    background: white;
+    justify-content:space-around;
+    padding: 1px;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 60vh;
+    flex-direction: column;
+}
+
+.lanche{
+    height: 8vh;
+    background: gray;
+    padding: 15px;
+    box-sizing: border-box;
+   }
+
+.acompanhamento{
+    height: 8vh;
+    background: gray;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.bebida{
+    height: 8vh;
+    background: gray;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.alterar{
+    display:flex;
+    justify-content:space-around;
+    padding: 15px;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 60vh;
+    flex-direction: column;
+    height: 80px;
+}
+    
+
+#botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 300px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.alterar1{
+    /* margin-left: auto; */
+    margin-right: 50px;
+    background: orange;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    justify-content: center;
+}
+
+/* .alterar2{
+    background: orange;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alterar3{
+    background: orange;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.pagamento{
+    margin-left: auto;
+    margin-right: auto;
+    background: orange;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    justify-content: center;
+}
+
+.total p{
+   margin-left: 2px;
+   font-weight: 800;
+}
+
+input {
+    
+    outline: 0;
+    width: 100%;
+}
+
+.total input{
+    
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    border-color: black;
+    background: orange;
+    text-align: center;
+}
+
+input::placeholder{
+    color: black;
+    margin-right: 60px;
+}

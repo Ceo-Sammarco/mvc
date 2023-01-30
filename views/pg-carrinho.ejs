@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/css-pg-carrinho.css">
+    <link rel="stylesheet" href="stylesheets/css-header.css">
+    <link rel="stylesheet" href="stylesheets/css-footer.css">
+    <title>carrinho</title>
+</head>
+<%- include("card-login-e-registro"); %> 
+<body>
+    <%- include('./partials/header') %>
+
+    <main>
+        <form action="/sucesso" method="POST">
+            <section>
+                <ul class="lista" style="list-style-type:none;">
+                    <li class="lanche">Lanche</li>
+                        <ul>
+                            <input type="text" name="pao" value="<%=servico.pao%>" placeholder="<%=servico.pao%>" >
+                        </ul> 
+                            <li class="acompanhamento">Acompanhamento</li>
+                        <ul>
+                            <input type="text" name="acompanhamento" value="<%=servico.acompanhamento%>" placeholder="<%=servico.acompanhamento%>" >
+                        </ul>
+                    <li class="bebida">Bebida</li>
+                        <ul>
+                            <input type="text" name="bebida" value="<%=servico.bebidas%>" placeholder="<%=servico.bebidas%>" >
+                        </ul>
+                </ul>
+            </section>
+
+            <section class="total">
+                <input  value="TOTAL   =   R$ <%=servico.valorTotal%>"   name="total" >
+            </section>
+            
+            <section id="botao">
+                <a href="/produtos1"><button class = "alterar1">Alterar pedido</button></a>
+                <button class="pagamento">Enviar Pedido</button>
+            </section>
+        </form>
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+<script>
+
+</script>
+</html>
+
+
+ <!-- ADD CARD LOGIN & REGISTRO -->
+
+
