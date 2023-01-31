@@ -14,12 +14,11 @@ const usuarioController = {
                 senha: hash,
                 telefone: tel
             } )
-        }
+        };
         criarUsuario()
         console.log('xablauuu')
         res.redirect('/')
     },
-
     login: async (req, res) => { 
         const { email, pswd} = req.body
         const user = await Usuario.findOne({ where: { email: email } });
