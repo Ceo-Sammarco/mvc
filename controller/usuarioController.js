@@ -5,15 +5,15 @@ const {sequelize, Usuario} = require('../models/index');
 
 const usuarioController = {
     cadastroUsuario: (req, res) => {
-        const { txt, email, pswd, tel} = req.body
-        const hash = bcrypt.hashSync(pswd, saltRounds);
-        const criarUsuario = async () => {
-            const user = await Usuario.create({
+        const { txt, email, pswd, tel } = req.body,
+        hash = bcrypt.hashSync(pswd, saltRounds),
+        criarUsuario = async () => {
+            const user = await Usuario.create( {
                 nome: txt,
                 email: email,
                 senha: hash,
                 telefone: tel
-            })
+            } )
         }
         criarUsuario()
         console.log('xablauuu')
