@@ -1,34 +1,36 @@
-var createError = require( "http-errors" );
-const express = require( "express" );
-var path = require( "path" );
-var cookieParser = require( "cookie-parser" );
-var logger = require( "morgan" );
-const session = require('express-session')
+var createError = require( "http-errors" ),
+	express = require( "express" ),
+	path = require( "path" ),
+	cookieParser = require( "cookie-parser" ),
+	logger = require( "morgan" ),
+	session = require( "express-session" ),
+	app = express();
 
-var indexRouter = require( "./routes/index" );
-var usersRouter = require( "./routes/users" );
-const { config } = require("process");
+var indexRouter = require( "./src/routes/index" ),
+	usersRouter = require( "./src/routes/users" );
+    
+const { config } = require( "process" );
 
 // var funcoes = require('./funcoes');
 
-const app = express();
 
 // app.locals.funcoes = funcoes;
 
 // view engine setup
-app.set( "views", path.join( __dirname, "views" ) );
+app.set( "views", path.join( __dirname, "src/views" ) );
 app.set( "view engine", "ejs" );
 
 app.use( logger( "dev" ) );
 app.use( express.json() );
 app.use( express.urlencoded( { extended: false } ) );
 app.use( cookieParser() );
-app.use( express.static( path.join( __dirname, "public" ) ) );
-app.use(session({
+app.use( express.static( path.join( __dirname, "src/public" ) ) );
+
+app.use( session( {
 	resave: true,
 	saveUninitialized: true,
 	secret: "palavraSecreta"
-  }));
+} ) );
 
 app.use( "/", indexRouter );
 app.use( "/users", usersRouter );
@@ -52,13 +54,13 @@ app.use( function( err, req, res, next ) {
 module.exports = app;
 
 
-// const myFunction = async () => {
-// 	const {sequelize, Lanche} = require('./models/index.js');
-	
-// 	const novoAcompanhamento = await Lanche.create({
-// 	  	nome: "Heat Burguer Triplo",
-// 	  	valor: 31
-// 	})
-// 	return novoAcompanhamento
-//   }
-//   myFunction();
+// const myFunction = async() => {
+// 	const { sequelize, Lanche } = require( "./models/index.js" );
+
+// 	const novoAcompanhamento = await Lanche.create( {
+// 		nome: "Heat Burguer Triplo",
+// 		valor: 31
+// 	} );
+// 	return novoAcompanhamento;
+// };
+// myFunction();
