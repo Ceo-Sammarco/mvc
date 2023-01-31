@@ -1,13 +1,10 @@
 
 
-function validaUsuarioLogado(req, res, next) {
+function validaUsuarioLogado( req, res, next ) {
     const user = req.session.user;
-    if(user) {
-        next()
-    } else {
-        res.redirect('/')
-    }
+    
+    user ? next() : res.redirect( "/" );
 }
 
 
-module.exports = validaUsuarioLogado
+module.exports = validaUsuarioLogado;
